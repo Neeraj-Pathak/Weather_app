@@ -12,10 +12,14 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="center">Whats the Weather</h1>
+        <h1 id="center">-Weather App-</h1>
         <div class="upper">
             <input placeholder="Enter City Name" type="text" />
             <button><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+        
+        <div class="error">
+            <p>Invalid City Name</p>
         </div>
 
         <div class="middle">
@@ -23,8 +27,10 @@
             <div class="details">
                 <div class="details-up">
                     <h1 class="temp"></h1>
+                    <h2 class="time"><i class="fa-solid fa-clock"></i></h2>
                 </div>
                 <h1 class="city"></h1>
+                <h4 class="code"></h4>
                 <h2 class="min-max">
                     <i class="fa-solid fa-temperature-low" id="min"><h6>Min</h6></i>
                     <i class="fa-solid fa-temperature-high" id="max"><h6>MAx</h6></i>
@@ -45,6 +51,7 @@
                 <i class="fa-solid fa-circle-info"></i>
                 <div class="box-1-icon">
                     <h3 class="desc"></h3>
+                    
                     <h4>Climate</h4>
                 </div>
             </div>
