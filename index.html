@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='style.css' rel='stylesheet'>
+
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="center">Whats the Weather</h1>
+        <div class="upper">
+            <input placeholder="Enter City Name" type="text" />
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="middle">
+            <img src="" class="weather-img">
+            <div class="details">
+                <div class="details-up">
+                    <h1 class="temp"></h1>
+                </div>
+                <h1 class="city"></h1>
+                <h2 class="min-max">
+                    <i class="fa-solid fa-temperature-low" id="min"><h6>Min</h6></i>
+                    <i class="fa-solid fa-temperature-high" id="max"><h6>MAx</h6></i>
+                </h2>    
+                     
+            </div>
+        </div>
+
+        <div class="lower">
+            <div class="box-1">
+                <i class="fa-solid fa-water"></i>
+                <div class="box-1-icon">
+                    <h3 class="humidity"></h3>
+                    <h4>Humidity</h4>
+                </div>
+            </div>
+            <div class="box-1">
+                <i class="fa-solid fa-circle-info"></i>
+                <div class="box-1-icon">
+                    <h3 class="desc"></h3>
+                    <h4>Climate</h4>
+                </div>
+            </div>
+            <div class="box-2">
+                <i class="fa-solid fa-wind"></i>
+                <div class="box-2-icon">
+                    <h3 id="speed"></h3>
+                    <h4>Wind Speed</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
