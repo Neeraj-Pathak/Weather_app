@@ -25,6 +25,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 .container{
     background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
     /* background-color: #3C3D37; */
@@ -51,8 +52,8 @@ body{
     color: darkgray;
     padding: 15px;
     border: none
-    outline: none;
-    font-size: 15px;
+    outline : none;
+    font-size : 15px;
 
 }
 
@@ -72,6 +73,16 @@ body{
     outline: none;
     border: none;
 }
+
+/* ERROR */
+
+.error{
+    display: none;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+} 
 
 /* MIDDLE */
 .middle{
@@ -111,6 +122,11 @@ body{
 .details-up span{
     font-size: 2.5rem;
     position: relative;
+}
+
+.code{
+    display: flex;
+    justify-content: center;
 }
 
 .min-max{
@@ -214,20 +230,33 @@ body{
 
 /* MEDIA QUERIES
 
-/* Mobile Phones (Portrait and Landscape) */
-/* @media only screen and (max-width: 600px) {
+/* Media Queries for Mobile Phones (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+
+    /* General adjustments */
     body {
         flex-direction: column;
-        justify-content: flex-start;
         padding: 1rem;
+        justify-content: flex-start;
+        align-items: stretch;
+        background: radial-gradient(circle at 20% 50%, rgb(255, 124, 0) 0%, rgb(255, 163, 77) 24%, rgb(19, 30, 37) 66%);
+    }
+
+    #center {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 
     .container {
         width: 100%;
-        margin: 0 1rem;
+        margin: 0 auto;
         border-radius: 10px;
     }
 
+    /* UPPER Section */
     .upper {
         flex-direction: column;
         align-items: center;
@@ -236,26 +265,33 @@ body{
 
     .upper input {
         width: 90%;
-        margin-bottom: 1rem;
+        height: 2.5rem;
         font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1rem;
     }
 
     .upper i {
+        font-size: 18px;
         padding: 0.75rem;
     }
 
+    /* MIDDLE Section */
     .middle {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         margin: 2rem 0;
     }
 
-    .details {
-        padding: 1rem;
-    }
-
     .temp {
         font-size: 3rem;
+        margin-top: 10px;
+    }
+
+    .details {
+        padding: 1rem;
     }
 
     .details-up span {
@@ -264,13 +300,21 @@ body{
 
     .min-max {
         flex-direction: column;
-        padding: 0 1rem;
+        padding: 1rem 0;
+        margin: 1rem 0;
+    }
+
+    .min-max #min,
+    .min-max #max {
+        font-size: 1.5rem;
     }
 
     .city {
         font-size: 24px;
         padding: 0.5rem;
         border-radius: 15px;
+        width: auto;
+        margin: 1rem 0;
     }
 
     .weather-img {
@@ -278,9 +322,17 @@ body{
         height: 150px;
     }
 
+    /* LOWER Section */
     .lower {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .lower h3 {
+        font-size: 18px;
+        padding: 5px 10px;
+        margin-bottom: 0.5rem;
     }
 
     .lower h4 {
@@ -288,147 +340,28 @@ body{
         padding: 5px 10px;
     }
 
-    .lower h3 {
-        font-size: 18px;
+    /* Adjusting box layouts */
+    .box-1,
+    .box-2 {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
     }
 
-    .box-1, .box-2 {
-        margin-bottom: 1rem;
+    .box-1 i,
+    .box-2 i {
+        font-size: 30px;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Show MIDDLE and LOWER sections on mobile */
+    .middle {
+        display: flex;
+    }
+
+    .lower {
+        display: flex;
     }
 }
 
-/* Tablets (Portrait and Landscape) */
-/* @media only screen and (min-width: 601px) and (max-width: 900px) {
-    body {
-        padding: 1.5rem;
-    }
-
-    .container {
-        width: 90%;
-        margin: 1rem;
-    }
-
-    .upper input {
-        width: 80%;
-        font-size: 16px;
-    }
-
-    .upper i {
-        font-size: 18px;
-    }
-
-    .temp {
-        font-size: 4rem;
-    }
-
-    .details-up span {
-        font-size: 2.25rem;
-    }
-
-    .min-max {
-        padding: 0 3rem;
-    }
-
-    .city {
-        font-size: 28px;
-        padding: 0.75rem;
-        border-radius: 20px;
-    }
-
-    .weather-img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .lower h4 {
-        font-size: 18px;
-        padding: 6px 12px;
-    }
-
-    .lower h3 {
-        font-size: 20px;
-    }
-} */
-
-/* Small Laptops (Landscape) */
-/* @media only screen and (min-width: 901px) and (max-width: 1200px) {
-    .container {
-        width: 80%;
-        margin: 1rem auto;
-    }
-
-    .upper input {
-        width: 75%;
-    }
-
-    .upper i {
-        font-size: 22px;
-    }
-
-    .temp {
-        font-size: 4.5rem;
-    }
-
-    .details-up span {
-        font-size: 2.5rem;
-    }
-
-    .city {
-        font-size: 32px;
-        border-radius: 22px;
-    }
-
-    .weather-img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .lower h4 {
-        font-size: 20px;
-    }
-
-    .lower h3 {
-        font-size: 22px;
-    }
-} */
-
-/* Large Laptops / Desktops */
-/* @media only screen and (min-width: 1201px) {
-    .container {
-        width: 70%;
-        margin: 2rem auto;
-    }
-
-    .upper input {
-        width: 70%;
-    }
-
-    .upper i {
-        font-size: 24px;
-    }
-
-    .temp {
-        font-size: 5rem;
-    }
-
-    .details-up span {
-        font-size: 3rem;
-    }
-
-    .city {
-        font-size: 35px;
-    }
-
-    .weather-img {
-        width: 224px;
-        height: 224px;
-    }
-
-    .lower h4 {
-        font-size: 22px;
-    }
-
-    .lower h3 {
-        font-size: 24px;
-    }
-} */ */ */
