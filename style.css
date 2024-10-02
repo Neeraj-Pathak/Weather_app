@@ -32,6 +32,7 @@ body{
     width: auto;
     height: auto;
     border-radius: 15px;
+    border: 5px solid #ECDFCC;
 }
 
 /* UPPER */
@@ -44,18 +45,31 @@ body{
     margin: 0px 1rem 0px 1rem;
 }
 
-.upper input{
+.upper input {
     height: 3rem;
     width: 75%;
     border-radius: 25px;
-    /* background-color: #697565; */
     color: darkgray;
     padding: 15px;
-    border: none
-    outline : none;
-    font-size : 15px;
-
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background-color: #3C3D37;
+    transition: width 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
 }
+
+.upper input:hover {
+    background-color: #4B4C44; /* Slightly lighten background on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+.upper input:focus {
+    width: 85%; /* Increase width on focus */
+    background-color: #5C5D53; /* Change background on focus */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); /* Increase shadow on focus */
+    color: #fff; /* Change text color when focused */
+}
+
 
 .upper i{
     font-size: 20px;
@@ -155,8 +169,19 @@ body{
     justify-content: center;
     font-size: 35px;
     width: auto;
-    border: 1px solid #ECDFCC ;
+    border: 1px solid #ECDFCC;
     border-radius: 25px;
+    background-image: linear-gradient(to right, #ECDFCC 0%, #ECDFCC 100%);
+    background-size: 0% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    color: #ECDFCC; /* Initially matches background color */
+    transition: background-size 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.city:hover{
+    background-size: 100% 100%;
+    color: #000;
 }
 
 .weather-img{
@@ -195,20 +220,25 @@ body{
    margin-right: 1rem;
 }
 
-.lower h3{
-    border: 1px solid #ECDFCC ;
+.lower h3 {
+    border: 1px solid #ECDFCC;
     border-radius: 25px;
-    /* width: auto; */
-    align-items: center;
     padding: 5px;
     margin-bottom: 1px;
     cursor: pointer;
+    background-image: linear-gradient(to right, #ECDFCC 0%, #ECDFCC 100%);
+    background-size: 0% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    color: #ECDFCC; /* Initially matches background color */
+    transition: background-size 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-.lower h3:hover{
-    background-color: #ECDFCC;
-    color: black;
+.lower h3:hover {
+    background-size: 100% 100%;
+    color: #000;
 }
+
 
 .lower h3,h4 {
     font-weight: 100;
